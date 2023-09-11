@@ -1,0 +1,30 @@
+Input : malayalam
+Output : Yes
+
+Input : geeks
+Output : No
+
+// code
+
+#include <stdio.h>
+
+int main()
+{
+    long long int num,num1;
+    scanf("%lld",&num1);
+    int rem=0,rev;
+    num=num1;
+    while(num>0){
+        rem=num%10;
+        rev=rev*10+rem;
+        num/=10;
+    }
+    if(rev==num1){
+        printf("Palindrome");
+    }
+    else{
+        printf("No Palindrome");
+    }
+
+    return 0;
+}
